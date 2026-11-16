@@ -13,11 +13,8 @@ jobs:
                 working-directory: backend
         steps:
             - uses: actions/checkout@v4
-            - uses: shivammathur/setup-php@v2
-              with:
-                  php-version: "8.4"
-                  extensions: pdo_sqlite
-                  tools: composer
+            # The org only allows actions/*; ubuntu runners ship PHP 8.3 with pdo_sqlite and Composer.
+            - run: php -v && php -m | grep -i pdo_sqlite
             - run: composer install --no-interaction --no-progress
             - run: composer test
 
