@@ -1,0 +1,29 @@
+{
+    "name": "mangrove-ide/crm-api",
+    "description": "CRM REST API: plain PHP 8.3+ on the built-in web server, customers stored in SQLite via PDO.",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.3",
+        "ext-json": "*",
+        "ext-pdo_sqlite": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Crm\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Crm\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "serve": "php -S 0.0.0.0:${PORT:-4000} -t public public/index.php",
+        "seed": "php bin/seed.php",
+        "test": "phpunit"
+    }
+}

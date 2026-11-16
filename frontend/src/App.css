@@ -1,0 +1,113 @@
+:root {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: #1f2937;
+    background: #f5f6f8;
+}
+
+body {
+    margin: 0;
+}
+
+.app {
+    max-width: 880px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+}
+
+h1 {
+    margin: 0 0 20px;
+}
+
+.subtitle,
+.muted {
+    color: #6b7280;
+}
+
+.customer-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.4fr auto;
+    gap: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+input {
+    padding: 8px 10px;
+    font: inherit;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+}
+
+button {
+    padding: 8px 14px;
+    font: inherit;
+    color: #fff;
+    background: #2563eb;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+button.danger {
+    padding: 4px 10px;
+    color: #b91c1c;
+    background: transparent;
+    border: 1px solid #fecaca;
+}
+
+button.danger:hover {
+    background: #fef2f2;
+}
+
+.error {
+    color: #b91c1c;
+}
+
+.form-error {
+    grid-column: 1 / -1;
+    margin: 0;
+}
+
+.customer-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.customer-table th,
+.customer-table td {
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid #f0f1f3;
+}
+
+.customer-table th {
+    font-size: 0.85em;
+    color: #6b7280;
+    background: #f9fafb;
+}
+
+.customer-table .actions {
+    text-align: right;
+}
+
+.customer-table a {
+    color: #2563eb;
+}

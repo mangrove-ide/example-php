@@ -1,0 +1,7 @@
+node_modules/
+dist/
+vendor/
+*.sqlite
+*.sqlite-journal
+backend/data/
+.phpunit.cache/
